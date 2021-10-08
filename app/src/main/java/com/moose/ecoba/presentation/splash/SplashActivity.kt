@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.moose.ecoba.R
 import com.moose.ecoba.data.Preferences
+import com.moose.ecoba.databinding.ActivitySplashBinding
 import com.moose.ecoba.presentation.home.HomeActivity
 import com.moose.ecoba.presentation.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,10 +18,13 @@ class SplashActivity : AppCompatActivity() {
 
     @Inject
     lateinit var preferences: Preferences
+    private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val navigate = timerTask {
             // get the token

@@ -7,9 +7,8 @@
         <item name="colorSecondary">@color/primary</item>
         <item name="colorSecondaryVariant">@color/primaryLight</item>
         <item name="colorOnSecondary">@color/darkText</item>
+        <item name="android:textColor">@color/lightText</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="android:windowLightStatusBar">false</item>
-
         <item name="colorSurface">@color/nightLight</item>
 
         <item name="android:windowActivityTransitions">true</item>
