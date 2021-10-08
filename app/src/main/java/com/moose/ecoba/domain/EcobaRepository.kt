@@ -19,8 +19,8 @@ interface EcobaRepository {
 // bind the implementation to the interface
 @Module
 @InstallIn(ViewModelComponent::class)
-abstract class AuthRepositoryBinding {
+abstract class EcobaRepositoryBinding {
 
     @Binds
-    abstract fun provideRepository(impl: EcobaRepository): EcobaRepository
+    abstract fun provideRepository(impl: EcobaRepositoryImpl): EcobaRepository
 }

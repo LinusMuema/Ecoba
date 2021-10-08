@@ -8,13 +8,13 @@ import java.io.IOException
 import java.net.SocketTimeoutException
 
 @Serializable
-data class ApiError(val message: String)
+data class ApiError(val message: String, val success: Boolean)
 
 fun Throwable.parse(): String {
     return when (this){
         is HttpException -> {
             val body = this.response()!!.errorBody()!!.string()
-            val error: ApiError = Json.decodeFromString(body)
+            val error: ApiError = Json { ignoreUnknownKeys = true }.decodeFromString(body)
             return error.message
         }
         is SocketTimeoutException -> "Connection timed out"

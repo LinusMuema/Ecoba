@@ -12,7 +12,7 @@ data class UserResponse(
     val user: User,
     val token: String,
     val message: String,
-    val success: Boolean
+    val success: Boolean,
 )
 
 @Entity
