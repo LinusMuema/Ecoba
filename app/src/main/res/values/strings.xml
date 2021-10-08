@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ecoba</string>
+    <string name="login">Login</string>
+    <string name="email_hint">Your email address</string>
+    <string name="password_hint">Your password</string>
+    <string name="register">Register</string>
 </resources>
