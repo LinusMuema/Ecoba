@@ -2,8 +2,9 @@ package com.moose.ecoba.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.moose.ecoba.domain.models.User
 
-@Database(entities = [], version = 1, exportSchema = false)
+@Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class EcobaDatabase: RoomDatabase() {
 
     abstract fun getDao(): EcobaDao
